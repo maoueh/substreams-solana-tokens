@@ -22,12 +22,11 @@ Cargo.lock
 **/data/
 **/*.spkg
 *.spkg
-/sink
 /debug.log
 /replay.log
 
 # Miscellaneous
 *~
 /env/
-/node_modules/
+node_modules/
 deploy.sh
