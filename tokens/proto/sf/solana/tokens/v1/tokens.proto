@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package sf.solana.tokens.v1;
+
+message Events {
+  repeated Event data = 1;
+}
+
+message Event {
+  oneof type {
+    Transfer transfer = 10;
+  }
+
+  uint64 slot = 100;
+  string txn_id = 101;
+  uint64 block_height = 102;
+  int64 block_timestamp = 103;
+  string block_hash = 104;
+  uint32 instruction_index = 106;
+}
+
+message Transfer {
+  TransferInstruction instruction = 1;
+  TransferAccounts accounts = 2;
+
+  message TransferInstruction {
+      uint64 amount = 1;
+  }
+
+  message TransferAccounts {
+    string source = 1;
+    string destination = 2;
+    string signer = 3;
+  }
+}
+
