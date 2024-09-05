@@ -18,10 +18,6 @@ Reference/
 Cargo.lock
 
 # Substreams Files
-**/pb/
-**/data/
-**/*.spkg
-*.spkg
 /debug.log
 /replay.log
 
